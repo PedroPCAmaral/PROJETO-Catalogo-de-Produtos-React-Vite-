@@ -1,0 +1,164 @@
+/* Body e container geral */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Título */
+h1 {
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Lista de produtos */
+.produto-lista {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* permite que os cards quebrem de linha se necessário */
+  gap: 20px;
+}
+
+/* Card de produto */
+.produto-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  width: 220px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.produto-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.produto-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.produto-card h3 {
+  margin: 10px 0 5px 0;
+  color: #333;
+}
+
+.produto-card p {
+  color: #555;
+  margin: 5px 0;
+}
+
+.produto-card button {
+  background-color: gray;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.produto-card button:hover {
+  background-color: lightgrey;
+}
+
+/* Painel de detalhes (modal) */
+.painel-detalhes {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6); /* fundo escuro semi-transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  backdrop-filter: blur(4px); /
+}
+
+.painel {
+  background-color: #fff; 
+  color: #222; /
+  display: flex;
+  flex-direction: row;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 800px;
+  width: 90%;
+  gap: 20px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.painel img {
+  width: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Fundo próprio para o texto do painel */
+.painel-info {
+  background-color: rgba(255, 255, 255, 0.95); 
+  padding: 15px;
+  border-radius: 10px;
+  flex: 1;
+  color: #222;
+}
+
+.painel-info h2 {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.painel-info {
+  background-color: #ffffff; 
+  padding: 15px;
+  border-radius: 10px;
+  flex: 1;
+  color: #222;
+}
+
+
+.btn-fechar-detalhes {
+  background-color: #646cff;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-weight: 500;
+  transition: background-color 0.25s;
+}
+
+.btn-fechar-detalhes:hover {
+  background-color: #535bf2;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .painel {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .painel img {
+    width: 80%;
+  }
+
+  .painel-info {
+    text-align: center;
+  }
+}
