@@ -64,3 +64,5 @@ Você deve:
 • deixar o botão visível e funcional
 • criar um painel estilizado para o produto selecionado
 Você pode fazer no App.css ou separar em outro arquivo.
+
+UP BY PEDRO AMARAL
